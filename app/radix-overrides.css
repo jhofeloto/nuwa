@@ -1,0 +1,153 @@
+/* Override Radix UI components to match your logo theme */
+
+/* Custom styling for Radix UI buttons */
+.rt-Button {
+  background-color: var(--mint-9);
+  color: white;
+}
+
+.rt-Button:hover {
+  background-color: var(--mint-10);
+}
+
+.rt-Button[data-variant="outline"] {
+  background-color: transparent;
+  border-color: var(--mint-9);
+  color: var(--mint-9);
+}
+
+.rt-Button[data-variant="outline"]:hover {
+  background-color: var(--mint-3);
+}
+
+/* Custom styling for Radix UI cards */
+.rt-Card {
+  border-color: var(--mint-5);
+}
+
+.rt-Card:hover {
+  border-color: var(--mint-8);
+}
+
+/* Custom styling for Radix UI IconButton */
+.rt-IconButton {
+  color: var(--mint-11);
+}
+
+.rt-IconButton:hover {
+  background-color: var(--mint-3);
+}
+
+.rt-IconButton[data-variant="solid"] {
+  background-color: var(--mint-9);
+  color: white;
+}
+
+.rt-IconButton[data-variant="solid"]:hover {
+  background-color: var(--mint-10);
+}
+
+/* Override Radix UI dropdown items */
+.rt-DropdownMenuItem:hover {
+  background-color: var(--mint-3);
+}
+
+/* Override Radix UI dialog */
+.rt-DialogContent {
+  border-color: var(--mint-6);
+}
+
+.rt-DialogTitle {
+  color: var(--mint-11);
+}
+
+/* Override Radix UI input fields */
+.rt-TextFieldInput:focus {
+  border-color: var(--mint-8);
+  box-shadow: 0 0 0 1px var(--mint-7);
+}
+
+/* Override Radix UI Select */
+.rt-SelectTrigger:focus {
+  border-color: var(--mint-8);
+  box-shadow: 0 0 0 1px var(--mint-7);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .rt-Button {
+  background-color: var(--mint-8);
+}
+
+[data-theme="dark"] .rt-Button:hover {
+  background-color: var(--mint-7);
+}
+
+[data-theme="dark"] .rt-IconButton[data-variant="solid"] {
+  background-color: var(--mint-8);
+}
+
+[data-theme="dark"] .rt-Card {
+  border-color: var(--mint-8);
+  background-color: var(--mint-2);
+}
+
+/* Dropdown menu styling - force solid background */
+.rt-DropdownMenuContent,
+.rt-DropdownMenuSubContent {
+  background-color: white !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+}
+
+[data-theme="dark"] .rt-DropdownMenuContent,
+[data-theme="dark"] .rt-DropdownMenuSubContent {
+  background-color: #1f2937 !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+}
+
+/* Theme toggle specific styling to maintain consistent appearance */
+.theme-toggle-button .rt-IconButton {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.theme-toggle-button .rt-IconButton:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.rt-Text, 
+.rt-Heading, 
+.rt-Subtitle, 
+.rt-Label,
+.rt-Button,
+.rt-Link,
+.rt-DialogTitle,
+.rt-DialogDescription,
+.rt-TabsTrigger,
+.rt-SelectTrigger,
+.rt-TextFieldInput,
+.rt-TextArea,
+.rt-DropdownMenuItem,
+.rt-AlertDialogTitle,
+.rt-Card,
+.rt-Badge {
+  font-family: var(--font-lusitana), serif !important;
+}
+
+/* Optional: Adjust heading weights */
+.rt-Heading {
+  font-weight: 700 !important;
+}
+
+/* Optional: Adjust specific Radix UI text sizes if needed */
+.rt-Text[data-size="1"],
+.rt-Text[data-size="2"],
+.rt-Text[data-size="3"] {
+  letter-spacing: -0.01em;
+}
+
+/* Optional: Font adjustments for specific components */
+.rt-Button {
+  letter-spacing: 0.01em;
+}

@@ -1,0 +1,93 @@
+/* Custom navbar styling to maintain consistent appearance regardless of theme */
+
+/* Force navbar background to always be logo-deep color */
+nav.bg-logo-deep {
+  background-color: #0A5E5C !important; /* Your logo-deep color */
+  color: white !important;
+}
+
+/* Navbar hover states */
+.hover\:bg-logo-mid:hover {
+  background-color: #16A396 !important; /* Your logo-mid color */
+}
+
+/* Focus states */
+.focus\:ring-logo-light:focus {
+  --tw-ring-color: #21DDB8 !important; /* Your logo-light color */
+}
+
+/* Active states */
+.bg-logo-mid {
+  background-color: #16A396 !important; /* Your logo-mid color */
+}
+
+/* Ensure text is white in navbar */
+.navbar-text {
+  color: white !important;
+}
+
+.navbar-text-muted {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Theme toggle button styling */
+.theme-toggle-button {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.theme-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dropdown menu styling - consistent for all navbar dropdowns */
+.navbar-dropdown {
+  background-color: white !important;
+  border-color: #21DDB8 !important;
+  color: #333 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+  opacity: 1 !important;
+}
+
+/* Dropdown menu items */
+.navbar-dropdown-item {
+  color: #333 !important;
+}
+
+.navbar-dropdown-item:hover {
+  background-color: rgba(33, 221, 184, 0.1) !important;
+}
+
+/* Add spacing between toggle buttons */
+nav .theme-toggle + .w-2 {
+  margin: 0 0.5rem !important;
+}
+
+@media (max-width: 640px) {
+  /* Add more spacing on small screens */
+  nav .theme-toggle + .w-2 {
+    margin: 0 0.75rem !important;
+  }
+}
+
+/* These styles will apply even in dark mode */
+[data-theme="dark"] nav.bg-logo-deep {
+  background-color: #0A5E5C !important;
+}
+
+[data-theme="dark"] .hover\:bg-logo-mid:hover {
+  background-color: #16A396 !important;
+}
+
+[data-theme="dark"] .theme-toggle-button {
+  color: white !important;
+}
+
+[data-theme="dark"] .navbar-dropdown {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+[data-theme="dark"] .navbar-dropdown-item {
+  color: #333 !important;
+}

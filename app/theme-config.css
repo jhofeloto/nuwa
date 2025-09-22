@@ -1,0 +1,119 @@
+/* globals.css (or your root CSS file) */
+
+/* First import your theme variables */
+:root {
+  /* Base Radix UI accent colors matching your logo */
+  --accent-1: #f8fcfb;
+  --accent-2: #edfaf6;
+  --accent-3: #def7ef;
+  --accent-4: #c7f2e6;
+  --accent-5: #a9ebd9;
+  --accent-6: #7ee0c6;
+  --accent-7: #52d3b3;
+  --accent-8: #21DDB8; /* Your logo-light color */
+  --accent-9: #16A396; /* Your logo-mid color */
+  --accent-10: #108f84;
+  --accent-11: #0A5E5C; /* Your logo-deep color */
+  --accent-12: #053230;
+  
+  /* Custom mint scale (which matches your logo perfectly) */
+  --mint-1: #f8fcfb;
+  --mint-2: #edfaf6;
+  --mint-3: #def7ef;
+  --mint-4: #c7f2e6;
+  --mint-5: #a9ebd9;
+  --mint-6: #7ee0c6;
+  --mint-7: #52d3b3;
+  --mint-8: #21DDB8; /* Your logo-light color */
+  --mint-9: #16A396; /* Your logo-mid color */
+  --mint-10: #108f84;
+  --mint-11: #0A5E5C; /* Your logo-deep color */
+  --mint-12: #053230;
+  
+  /* Use Radix's naming for theme variables */
+  --color-accent: var(--mint-9);
+  --color-accent-foreground: white;
+  --color-accent-highlight: var(--mint-4);
+  
+  /* Background and foreground */
+  --background: 0 0% 100%;  /* For Tailwind HSL use */
+  --foreground: 215 25% 27%;  /* For Tailwind HSL use */
+  --border: 0 0% 90%;  /* For Tailwind HSL use */
+  
+  /* Map to direct CSS variables for standard use */
+  --color-background: white;
+  --color-foreground: #1f2937;
+  --color-border: #e5e7eb;
+  
+  /* Radix component variables */
+  --color-panel-solid: white;
+  --color-surface: white;
+  
+  /* Button styles */
+  --button-background-color: var(--mint-9);
+  --button-text-color: white;
+  --button-hover-background-color: var(--mint-10);
+  
+  /* Define colors for Tailwind direct use */
+  --logo-deep-color: #0A5E5C;
+  --logo-mid-color: #16A396;
+  --logo-light-color: #21DDB8;
+}
+
+/* Override additional Radix component styling */
+.rt-Button {
+  background-color: var(--mint-9);
+  color: white;
+}
+
+.rt-Button:hover {
+  background-color: var(--mint-10);
+}
+
+/* Custom dark theme values */
+[data-theme='dark'] {
+  --accent-1: #042321;
+  --accent-2: #053230;
+  --accent-3: #064641;
+  --accent-4: #085c56;
+  --accent-5: #0A5E5C; /* Your logo-deep color */
+  --accent-6: #0d7b77;
+  --accent-7: #108f84;
+  --accent-8: #16A396; /* Your logo-mid color */
+  --accent-9: #21DDB8; /* Your logo-light color */
+  --accent-10: #4ce5c4;
+  --accent-11: #7eedd0;
+  --accent-12: #c6f7e9;
+  
+  /* Same pattern for mint colors */
+  --mint-1: #042321;
+  --mint-2: #053230;
+  --mint-3: #064641;
+  --mint-4: #085c56;
+  --mint-5: #0A5E5C; /* Your logo-deep color */
+  --mint-6: #0d7b77;
+  --mint-7: #108f84;
+  --mint-8: #16A396; /* Your logo-mid color */
+  --mint-9: #21DDB8; /* Your logo-light color */
+  --mint-10: #4ce5c4;
+  --mint-11: #7eedd0;
+  --mint-12: #c6f7e9;
+  
+  /* Background and foreground */
+  --background: 215 25% 10%;  /* For Tailwind HSL use */
+  --foreground: 220 10% 90%;  /* For Tailwind HSL use */
+  --border: 215 25% 27%;  /* For Tailwind HSL use */
+  
+  /* Map to direct CSS variables */
+  --color-background: #111827;
+  --color-foreground: #e5e7eb;
+  --color-border: #1f2937;
+  
+  /* Component variables */
+  --color-panel-solid: var(--mint-2);
+  --color-surface: var(--mint-1);
+  
+  /* Button styles */
+  --button-background-color: var(--mint-8);
+  --button-hover-background-color: var(--mint-7);
+}
