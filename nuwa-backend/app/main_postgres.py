@@ -32,13 +32,19 @@ from app.ml.models.co2_predictor import co2_prediction_service
 # Import Satellite services
 from app.satellite.satellite_service import satellite_service
 
+# Import Authentication system
+from app.api.auth import router as auth_router
+from app.core.middleware import SecurityMiddleware
+from app.models.users import User, UserRole, UserStatus
+
 # Global application state
 app_state = {
     "startup_time": None, 
     "db_initialized": False, 
     "ml_initialized": False,
     "satellite_initialized": False,
-    "postgis_available": False
+    "postgis_available": False,
+    "auth_initialized": False
 }
 
 @asynccontextmanager
@@ -73,7 +79,11 @@ async def lifespan(app: FastAPI):
         app_state["satellite_initialized"] = True
         logger.info("✅ Satellite services initialized successfully")
         
-        logger.info("✅ Nuwa Backend Service started successfully with PostgreSQL + PostGIS + ML + Satellite")
+        # Initialize Authentication system
+        app_state["auth_initialized"] = True
+        logger.info("✅ Authentication system initialized successfully")
+        
+        logger.info("✅ Nuwa Backend Service started successfully with PostgreSQL + PostGIS + ML + Satellite + Auth")
         
     except Exception as e:
         logger.error(f"❌ Failed to start Nuwa Backend Service: {str(e)}")
@@ -81,6 +91,7 @@ async def lifespan(app: FastAPI):
         app_state["ml_initialized"] = False
         app_state["satellite_initialized"] = False
         app_state["postgis_available"] = False
+        app_state["auth_initialized"] = False
         
     yield
     
@@ -114,6 +125,7 @@ def create_application() -> FastAPI:
         - 🛰️ **Satellite Monitoring**: Multi-source satellite data integration
         - 🎯 **Smart Analytics**: Machine learning enhanced insights
         - 🔧 **Health Monitoring**: Comprehensive system health checks
+        - 🔐 **Authentication & Authorization**: JWT-based auth with role management
         - 📖 **API Documentation**: Interactive API documentation
         
         ### Database Features:
@@ -122,6 +134,7 @@ def create_application() -> FastAPI:
         - 🔗 **Relationships**: Proper foreign key constraints and referential integrity
         - 🏃 **Performance**: Optimized queries, indexing, and connection pooling
         - 📊 **Geospatial Data**: Native support for polygons, points, and raster data
+        - 👥 **User Management**: Comprehensive user roles and permissions system
         
         ### Geospatial Capabilities:
         - **Vector Operations**: Point, line, polygon analysis
@@ -157,10 +170,16 @@ def create_application() -> FastAPI:
     
     app.add_middleware(GZipMiddleware, minimum_size=1000)
     
+    # Add Security Middleware for authentication and rate limiting
+    app.add_middleware(SecurityMiddleware, enable_rate_limiting=True, enable_audit_logging=True)
+    
     return app
 
 # Create application instance
 app = create_application()
+
+# Include authentication router
+app.include_router(auth_router)
 
 # Setup logging
 setup_logging()
@@ -184,7 +203,8 @@ async def root():
             "Geospatial Analytics", 
             "ML Predictions",
             "Satellite Monitoring",
-            "Carbon Credit Evaluation"
+            "Carbon Credit Evaluation",
+            "User Authentication & Authorization"
         ]
     }
 
@@ -201,7 +221,8 @@ async def health_check():
             "status": "healthy" if all([
                 app_state.get("db_initialized"),
                 app_state.get("ml_initialized"),
-                app_state.get("satellite_initialized")
+                app_state.get("satellite_initialized"),
+                app_state.get("auth_initialized")
             ]) else "degraded",
             "timestamp": datetime.utcnow().isoformat(),
             "uptime_seconds": (
@@ -221,11 +242,13 @@ async def health_check():
                 "database": "initialized" if app_state.get("db_initialized") else "not_initialized",
                 "ml_models": "initialized" if app_state.get("ml_initialized") else "not_initialized", 
                 "satellite_services": "initialized" if app_state.get("satellite_initialized") else "not_initialized",
+                "authentication": "initialized" if app_state.get("auth_initialized") else "not_initialized",
             },
             "features": {
                 "geospatial_analysis": app_state.get("postgis_available", False),
                 "ml_predictions": app_state.get("ml_initialized", False),
                 "satellite_integration": app_state.get("satellite_initialized", False),
+                "user_authentication": app_state.get("auth_initialized", False),
             }
         }
     except Exception as e:
