@@ -7,3 +7,378 @@
 2025-09-23 03:16:27 - app.main - [32mINFO[0m - main_simple - lifespan:32 - 🚀 Starting Nuwa Backend Service (Simplified Mode)...
 2025-09-23 03:16:27 - app.main - [32mINFO[0m - main_simple - lifespan:37 - ✅ Nuwa Backend Service started successfully (Database skipped)
 2025-09-23 03:16:49 - app.main - [32mINFO[0m - main_simple - create_project:224 - Created project 1: Amazon Reforestation Test Project
+2025-09-23 03:27:52 - app.main - [32mINFO[0m - main_simple - lifespan:45 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:27:52 - app.main - [32mINFO[0m - main_simple - lifespan:46 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:27:53 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:27:53 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:27:53 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:27:53 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:27:53 - app.main - [32mINFO[0m - main_simple - lifespan:32 - 🚀 Starting Nuwa Backend Service (Simplified Mode)...
+2025-09-23 03:27:53 - app.main - [32mINFO[0m - main_simple - lifespan:37 - ✅ Nuwa Backend Service started successfully (Database skipped)
+2025-09-23 03:28:33 - app.main - [32mINFO[0m - main_simple - lifespan:45 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:28:33 - app.main - [32mINFO[0m - main_simple - lifespan:46 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:28:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:28:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:28:35 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:28:35 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:28:35 - app.main - [32mINFO[0m - main_simple - lifespan:32 - 🚀 Starting Nuwa Backend Service (Simplified Mode)...
+2025-09-23 03:28:35 - app.main - [32mINFO[0m - main_simple - lifespan:37 - ✅ Nuwa Backend Service started successfully (Database skipped)
+2025-09-23 03:29:32 - app.main - [32mINFO[0m - main_simple - lifespan:45 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:29:32 - app.main - [32mINFO[0m - main_simple - lifespan:46 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:29:33 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:29:33 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:29:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:29:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:29:34 - app.main - [32mINFO[0m - main_simple - lifespan:32 - 🚀 Starting Nuwa Backend Service (Simplified Mode)...
+2025-09-23 03:29:34 - app.main - [32mINFO[0m - main_simple - lifespan:37 - ✅ Nuwa Backend Service started successfully (Database skipped)
+2025-09-23 03:30:05 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:30:05 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:30:15 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:30:15 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:30:30 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:30:30 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:30:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:30:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:30:55 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:30:55 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:31:01 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:31:01 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:31:05 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:31:05 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:31:10 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:31:10 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:31:10 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:31:10 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:31:10 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:31:10 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:31:10 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:31:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:31:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _create_sample_data:268 - ✅ Created 3 sample projects
+2025-09-23 03:31:11 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:32:01 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:32:01 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:32:01 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:32:02 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:32:02 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:32:03 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:32:03 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:32:03 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:32:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:32:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:32:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:32:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:32:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:32:03 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:32:39 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:32:39 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:32:39 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:32:40 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:32:40 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:32:40 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:32:40 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:32:40 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:32:40 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:32:40 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:32:40 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:32:40 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:32:40 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:32:40 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:33:27 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:33:27 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:33:27 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:33:28 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:28 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:29 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:29 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:29 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:33:29 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:33:29 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:33:29 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:33:29 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:33:29 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:33:29 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:33:31 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:33:31 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:33:31 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:33:31 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:31 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:32 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:32 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:32 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:33:32 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:33:32 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:33:32 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:33:32 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:33:32 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:33:32 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:33:33 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:33:33 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:33:33 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:33:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:34 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:35 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:33:35 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:33:35 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:33:35 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:33:35 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:33:35 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:33:35 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:33:35 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:33:35 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:33:35 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:33:36 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:36 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:37 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:37 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:37 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:33:37 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:33:37 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:33:37 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:33:37 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:33:37 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:33:37 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:33:37 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:33:37 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:33:37 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:33:38 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:38 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:39 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:33:39 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:33:39 - app.main - [32mINFO[0m - main_database - lifespan:36 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:33:39 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:33:39 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:33:39 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:33:39 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:33:39 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:33:39 - app.main - [32mINFO[0m - main_database - lifespan:43 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:34:49 - app.main - [32mINFO[0m - main_database - lifespan:52 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:34:49 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:34:49 - app.main - [32mINFO[0m - main_database - lifespan:54 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:34:50 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:34:50 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:34:52 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:34:52 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:34:52 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:34:52 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:34:52 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:34:52 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:34:52 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:34:52 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:34:52 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Nuwa Backend Service started successfully with Database
+2025-09-23 03:34:57 - app.main - [32mINFO[0m - main_database - lifespan:55 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:34:57 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:34:57 - app.main - [32mINFO[0m - main_database - lifespan:57 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:34:58 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:34:58 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:00 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:00 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:00 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:35:00 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:35:00 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:35:00 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:35:00 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:35:00 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:35:00 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:35:00 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:35:00 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:35:00 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:35:00 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:35:03 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:35:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:35:03 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:35:04 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:04 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:07 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:07 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:07 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:35:07 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:35:07 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:35:07 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:35:07 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:35:07 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:35:07 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:35:07 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:35:07 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:35:07 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:35:07 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:35:08 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:35:08 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:35:08 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:35:08 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:08 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:11 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:11 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:11 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:35:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:35:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:35:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:35:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:35:11 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:35:11 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:35:11 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:35:11 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:35:11 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:35:11 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:35:55 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:35:55 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:35:55 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:35:56 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:56 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:58 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:35:58 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:35:58 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:35:58 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:35:58 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:35:58 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:35:58 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:35:58 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:35:59 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:35:59 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:35:59 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:35:59 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:35:59 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:35:59 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:35:59 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:35:59 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:36:00 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:00 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:03 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:03 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:03 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:36:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:36:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:36:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:36:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:36:03 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:36:03 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:36:03 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:36:03 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:36:03 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:36:03 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:36:04 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:36:04 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:36:04 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:36:05 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:05 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:08 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:08 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:08 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:36:08 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:36:08 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:36:08 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:36:08 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:36:08 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:36:08 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:36:08 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:36:08 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:36:08 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:36:08 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:36:10 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:36:10 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:36:10 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:36:11 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:11 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:14 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:14 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:14 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:36:14 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:36:14 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:36:14 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:36:14 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:36:14 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:36:14 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:36:14 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:36:14 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:36:14 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:36:14 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:36:42 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:36:42 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:36:42 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:36:42 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:36:42 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:36:42 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:36:42 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:36:42 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:36:42 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:36:42 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:36:42 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:36:42 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:36:42 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:37:05 - app.main - [32mINFO[0m - main_database - predict_project_co2:547 - ML CO2 prediction completed for project area: 2500 ha
+2025-09-23 03:37:21 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:37:21 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:37:21 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:37:22 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:22 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:37:26 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:26 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:37:26 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:37:26 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:37:26 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:37:26 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:37:26 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:37:26 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:37:27 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:37:27 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:37:27 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:37:27 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:37:27 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:37:36 - app.main - [31mERROR[0m - main_database - enhance_project_with_ml:634 - Failed to enhance project 1 with ML: 'Project' object has no attribute 'duration_years'
+2025-09-23 03:37:36 - app.main - [33mWARNING[0m - main_database - http_exception_handler:723 - HTTP 500: Failed to enhance project with ML - http://8002-itul5g8xqfm9r87o3q08w-6532622b.e2b.dev/api/v1/ml/enhance-project/1
+2025-09-23 03:37:46 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:37:46 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:37:46 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:37:47 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:47 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:37:50 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:50 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:37:50 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:37:50 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:37:50 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:37:50 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:37:50 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:37:50 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:37:50 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:37:50 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:37:50 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:37:50 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:37:50 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:37:53 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:37:53 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:37:53 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:37:54 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:54 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:37:56 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:56 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:37:56 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:37:56 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:37:56 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:37:56 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:37:56 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:37:56 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:37:57 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:37:57 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:37:57 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:37:57 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:37:57 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:37:57 - app.main - [32mINFO[0m - main_database - lifespan:63 - 🛑 Shutting down Nuwa Backend Service...
+2025-09-23 03:37:57 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - close:176 - 🔌 Database connections closed
+2025-09-23 03:37:57 - app.main - [32mINFO[0m - main_database - lifespan:65 - ✅ Nuwa Backend Service shutdown complete
+2025-09-23 03:37:58 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:37:58 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:38:01 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:38:01 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:38:01 - app.main - [32mINFO[0m - main_database - lifespan:39 - 🚀 Starting Nuwa Backend Service with Database...
+2025-09-23 03:38:01 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:115 - 📡 Connected to SQLite: 3.40.1
+2025-09-23 03:38:01 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - _verify_connections:124 - 🔧 SQLite pragmas configured for performance
+2025-09-23 03:38:01 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:101 - ✅ SQLite database connections initialized successfully
+2025-09-23 03:38:01 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - initialize:102 - 📁 Database file: /home/user/webapp/nuwa-backend/data/nuwa_development.db
+2025-09-23 03:38:01 - app.core.database_sqlite - [32mINFO[0m - database_sqlite - create_tables:131 - ✅ Database tables created successfully
+2025-09-23 03:38:01 - app.main - [32mINFO[0m - main_database - lifespan:46 - ✅ Database initialized successfully
+2025-09-23 03:38:01 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - load_models:315 - Models loaded from 20250923_033404
+2025-09-23 03:38:01 - app.ml.models.co2_predictor - [32mINFO[0m - co2_predictor - initialize_models:351 - Existing trained models loaded successfully
+2025-09-23 03:38:01 - app.main - [32mINFO[0m - main_database - lifespan:51 - ✅ ML models initialized successfully
+2025-09-23 03:38:01 - app.main - [32mINFO[0m - main_database - lifespan:53 - ✅ Nuwa Backend Service started successfully with Database & ML
+2025-09-23 03:38:15 - app.main - [32mINFO[0m - main_database - enhance_project_with_ml:609 - Enhanced project 1 with ML prediction: 4696.70 tons CO2/year

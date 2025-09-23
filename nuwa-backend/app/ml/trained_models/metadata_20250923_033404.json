@@ -1,0 +1,49 @@
+{
+  "timestamp": "20250923_033404",
+  "feature_names": [
+    "area_hectares",
+    "duration_years",
+    "budget_usd",
+    "climate_factor",
+    "vegetation_factor",
+    "methodology_factor",
+    "soil_factor",
+    "annual_rainfall_mm",
+    "avg_temperature_c",
+    "elevation_m",
+    "area_budget_ratio",
+    "rainfall_temperature_index",
+    "latitude_abs",
+    "longitude",
+    "start_month",
+    "start_season",
+    "technology_factor",
+    "project_scale",
+    "intensity_factor"
+  ],
+  "model_metrics": {
+    "random_forest": {
+      "mse": 11055836.302289594,
+      "rmse": 3325.0317746285664,
+      "mae": 485.4604420588428,
+      "r2": 0.7420886774498228
+    },
+    "gradient_boosting": {
+      "mse": 8121474.6519196415,
+      "rmse": 2849.820108694519,
+      "mae": 488.24881923417854,
+      "r2": 0.8105416712708968
+    },
+    "linear_regression": {
+      "mse": 14449070.782001046,
+      "rmse": 3801.19333657222,
+      "mae": 1113.8275939316432,
+      "r2": 0.6629310661704295
+    }
+  },
+  "models_saved": [
+    "random_forest",
+    "gradient_boosting",
+    "linear_regression"
+  ]
+}
