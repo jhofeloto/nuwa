@@ -13,7 +13,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func, desc
 import logging
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import json
 
 # Import configurations
@@ -26,6 +26,9 @@ from app.models.projects_sqlite import Project, Evaluation
 
 # Import ML services
 from app.ml.models.co2_predictor import co2_prediction_service
+
+# Import Satellite services
+from app.satellite.satellite_service import satellite_service
 
 # Global application state
 app_state = {"startup_time": None, "db_initialized": False, "ml_initialized": False}
@@ -50,12 +53,17 @@ async def lifespan(app: FastAPI):
         app_state["ml_initialized"] = True
         logger.info("✅ ML models initialized successfully")
         
+        # Initialize Satellite services
+        app_state["satellite_initialized"] = True
+        logger.info("✅ Satellite services initialized successfully")
+        
         logger.info("✅ Nuwa Backend Service started successfully with Database & ML")
         
     except Exception as e:
         logger.error(f"❌ Failed to start Nuwa Backend Service: {str(e)}")
         app_state["db_initialized"] = False
         app_state["ml_initialized"] = False
+        app_state["satellite_initialized"] = False
         
     yield
     
@@ -85,6 +93,7 @@ def create_application() -> FastAPI:
         - 🔍 **Advanced Search**: Filtering, pagination, and sorting
         - 📈 **Analytics**: Project statistics and performance metrics
         - 🤖 **ML Predictions**: AI-powered CO2 capture predictions
+        - 🛰️ **Satellite Monitoring**: Multi-source satellite data integration
         - 🎯 **Smart Analytics**: Machine learning enhanced insights
         - 🔧 **Health Monitoring**: Comprehensive system health checks
         - 📖 **API Documentation**: Interactive API documentation
@@ -148,7 +157,8 @@ async def root():
             "Project CRUD Operations",
             "Evaluation Tracking",
             "Advanced Analytics",
-            "ML CO2 Predictions",
+            "ML CO2 Predictions", 
+            "Satellite Data Integration",
             "Sample Data Included"
         ]
     }
@@ -169,6 +179,7 @@ async def health_check():
             "api": "healthy",
             "database": db_health,
             "ml_models": "initialized" if app_state.get("ml_initialized") else "not_initialized",
+            "satellite_services": "initialized" if app_state.get("satellite_initialized") else "not_initialized",
         }
     }
     
@@ -713,6 +724,307 @@ async def get_ml_model_status():
     except Exception as e:
         logger.error(f"Failed to get ML model status: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to retrieve ML model status")
+
+# Satellite Data Integration endpoints
+@app.post("/api/v1/satellite/analyze-project", tags=["Satellite Monitoring"])
+async def analyze_project_satellite_data(project_data: Dict[str, Any]):
+    """
+    Comprehensive satellite analysis for carbon capture projects.
+    
+    This endpoint performs multi-source satellite monitoring including:
+    - Vegetation health assessment using NDVI
+    - Land cover change detection
+    - Biomass and carbon impact estimation
+    - Monitoring recommendations
+    
+    **Required Parameters:**
+    - bounds: Geographic boundaries [min_lon, min_lat, max_lon, max_lat]
+    - project_start_date: When the project began (YYYY-MM-DD)
+    
+    **Optional Parameters:**
+    - analysis_date: Current analysis date (defaults to today)
+    - satellite_preference: Preferred satellites ["sentinel2", "landsat", "mock"]
+    
+    **Returns:**
+    - Comprehensive satellite monitoring report
+    - Vegetation health trends
+    - Change detection results
+    - Carbon impact assessment
+    - Monitoring recommendations
+    """
+    try:
+        if not app_state.get("satellite_initialized", False):
+            raise HTTPException(
+                status_code=503,
+                detail="Satellite services not initialized. Please try again later."
+            )
+        
+        # Validate required parameters
+        required_fields = ['bounds', 'project_start_date']
+        missing_fields = [field for field in required_fields if field not in project_data]
+        
+        if missing_fields:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Missing required fields: {', '.join(missing_fields)}"
+            )
+        
+        # Parse dates
+        from datetime import date
+        project_start = date.fromisoformat(project_data['project_start_date'])
+        analysis_date = (
+            date.fromisoformat(project_data['analysis_date']) 
+            if 'analysis_date' in project_data 
+            else date.today()
+        )
+        
+        # Parse bounds
+        bounds = project_data['bounds']
+        if len(bounds) != 4:
+            raise HTTPException(
+                status_code=400,
+                detail="Bounds must be [min_longitude, min_latitude, max_longitude, max_latitude]"
+            )
+        
+        bounds_tuple = tuple(float(b) for b in bounds)
+        
+        # Get satellite analysis
+        analysis = await satellite_service.get_project_satellite_analysis(
+            project_bounds=bounds_tuple,
+            project_start_date=project_start,
+            analysis_date=analysis_date,
+            client_preference=project_data.get('satellite_preference')
+        )
+        
+        if analysis.get("success", False):
+            logger.info(f"Satellite analysis completed for project area: {bounds}")
+        
+        return {
+            "success": True,
+            "satellite_analysis": analysis,
+            "input_parameters": project_data,
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Satellite analysis error: {str(e)}")
+        raise HTTPException(status_code=500, detail="Satellite analysis failed")
+
+@app.post("/api/v1/satellite/vegetation-index", tags=["Satellite Monitoring"]) 
+async def calculate_vegetation_index(request_data: Dict[str, Any]):
+    """
+    Calculate vegetation indices for specific areas and time periods.
+    
+    **Supported Indices:**
+    - NDVI: Normalized Difference Vegetation Index
+    - EVI: Enhanced Vegetation Index
+    - SAVI: Soil Adjusted Vegetation Index
+    - NDWI: Normalized Difference Water Index
+    - NBR: Normalized Burn Ratio (Landsat only)
+    
+    **Required Parameters:**
+    - bounds: Geographic boundaries [min_lon, min_lat, max_lon, max_lat]
+    - start_date: Start of analysis period (YYYY-MM-DD)
+    - end_date: End of analysis period (YYYY-MM-DD)
+    
+    **Optional Parameters:**
+    - index_type: Vegetation index type (default: NDVI)
+    - satellite: Preferred satellite ["sentinel2", "landsat", "mock"]
+    """
+    try:
+        if not app_state.get("satellite_initialized", False):
+            raise HTTPException(
+                status_code=503,
+                detail="Satellite services not initialized. Please try again later."
+            )
+        
+        # Validate required parameters
+        required_fields = ['bounds', 'start_date', 'end_date']
+        missing_fields = [field for field in required_fields if field not in request_data]
+        
+        if missing_fields:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Missing required fields: {', '.join(missing_fields)}"
+            )
+        
+        # Parse parameters
+        from datetime import date
+        bounds_tuple = tuple(float(b) for b in request_data['bounds'])
+        start_date = date.fromisoformat(request_data['start_date'])
+        end_date = date.fromisoformat(request_data['end_date'])
+        index_type = request_data.get('index_type', 'NDVI')
+        satellite = request_data.get('satellite')
+        
+        # Calculate vegetation index
+        result = await satellite_service.calculate_vegetation_index_for_project(
+            project_bounds=bounds_tuple,
+            date_range=(start_date, end_date),
+            index_type=index_type,
+            client_name=satellite
+        )
+        
+        logger.info(f"Vegetation index {index_type} calculated for {bounds_tuple}")
+        
+        return {
+            "success": True,
+            "vegetation_analysis": result,
+            "parameters": request_data,
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Vegetation index calculation error: {str(e)}")
+        raise HTTPException(status_code=500, detail="Vegetation index calculation failed")
+
+@app.get("/api/v1/satellite/imagery/{project_id}", tags=["Satellite Monitoring"])
+async def get_project_imagery_metadata(
+    project_id: int, 
+    start_date: str,
+    end_date: str,
+    satellite: Optional[str] = None,
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Get available satellite imagery metadata for a specific project.
+    
+    Returns information about satellite data availability including:
+    - Available imagery dates
+    - Cloud cover percentages
+    - Spatial resolution
+    - Data sources and quality
+    """
+    try:
+        if not app_state.get("satellite_initialized", False):
+            raise HTTPException(
+                status_code=503,
+                detail="Satellite services not initialized. Please try again later."
+            )
+        
+        # Get project from database
+        result = await db.execute(select(Project).where(Project.id == project_id))
+        project = result.scalar_one_or_none()
+        
+        if not project:
+            raise HTTPException(status_code=404, detail="Project not found")
+        
+        # Parse dates
+        from datetime import date
+        start_dt = date.fromisoformat(start_date)
+        end_dt = date.fromisoformat(end_date)
+        
+        # Construct bounds from project data
+        if project.latitude and project.longitude:
+            # Create approximate bounds around project location (±0.01 degrees)
+            bounds = (
+                float(project.longitude) - 0.01,
+                float(project.latitude) - 0.01,
+                float(project.longitude) + 0.01,
+                float(project.latitude) + 0.01
+            )
+        else:
+            raise HTTPException(
+                status_code=400,
+                detail="Project does not have valid coordinates for satellite analysis"
+            )
+        
+        # Get imagery metadata
+        imagery_data = await satellite_service.get_satellite_imagery_for_project(
+            project_bounds=bounds,
+            start_date=start_dt,
+            end_date=end_dt,
+            client_name=satellite
+        )
+        
+        logger.info(f"Retrieved imagery metadata for project {project_id}")
+        
+        return {
+            "success": True,
+            "project": {
+                "id": project.id,
+                "name": project.name,
+                "coordinates": [project.longitude, project.latitude],
+                "area_hectares": project.project_area_hectares
+            },
+            "imagery_data": imagery_data,
+            "query_parameters": {
+                "start_date": start_date,
+                "end_date": end_date,
+                "satellite": satellite
+            },
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Failed to get imagery metadata for project {project_id}: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve imagery metadata")
+
+@app.get("/api/v1/satellite/status", tags=["Satellite Monitoring"])
+async def get_satellite_service_status():
+    """
+    Get current satellite service status and capabilities.
+    
+    Returns information about:
+    - Available satellite data sources
+    - Service health status  
+    - Supported analysis types
+    - API rate limits and usage
+    """
+    try:
+        available_clients = satellite_service.get_available_clients()
+        
+        return {
+            "success": True,
+            "satellite_services": {
+                "status": "operational",
+                "available_clients": available_clients,
+                "default_client": satellite_service.default_client,
+                "supported_satellites": {
+                    "sentinel2": {
+                        "name": "Sentinel-2",
+                        "resolution": "10m (RGB+NIR)",
+                        "revisit_time": "5-10 days",
+                        "spectral_bands": 13,
+                        "supported_indices": ["NDVI", "EVI", "SAVI", "NDWI", "NDMI"]
+                    },
+                    "landsat": {
+                        "name": "Landsat 8/9",
+                        "resolution": "30m (multispectral)",
+                        "revisit_time": "16 days (8 days combined)",
+                        "spectral_bands": 11,
+                        "supported_indices": ["NDVI", "EVI", "SAVI", "NBR", "NDMI", "NDWI"]
+                    },
+                    "mock": {
+                        "name": "Mock Satellite (Demo)",
+                        "resolution": "10-30m simulated",
+                        "revisit_time": "Variable",
+                        "purpose": "Testing and demonstration"
+                    }
+                },
+                "analysis_capabilities": [
+                    "Vegetation health monitoring",
+                    "Land cover change detection", 
+                    "Biomass estimation",
+                    "Carbon impact assessment",
+                    "Time series analysis"
+                ]
+            },
+            "system_status": {
+                "satellite_initialized": app_state.get("satellite_initialized", False),
+                "services_available": len(available_clients) > 0
+            },
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to get satellite service status: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve satellite service status")
 
 # Error handlers
 @app.exception_handler(HTTPException)
