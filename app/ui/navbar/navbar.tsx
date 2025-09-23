@@ -17,26 +17,27 @@ import { appConfig } from "@/app/app.config";
 import { useTranslation } from 'react-i18next';
 import ThemeToggle from "@/app/ui/navbar/theme-toggle";
 import LanguageToggle from "@/app/ui/navbar/language-toggle";
-// import { useAuthenticator } from '@aws-amplify/ui-react';
-// import { useRouter } from 'next/navigation';
+import { useAuth } from '@/app/lib/auth-context';
+import { UserMenu } from '@/app/ui/auth/user-menu';
+import { AuthModal } from '@/app/ui/auth/auth-modal';
+import { useState } from 'react';
 import './navbar.css';
 
 const Navbar = () => {
     const { t } = useTranslation('common');
-    // const { user, signOut } = useAuthenticator();
-    // const router = useRouter();
+    const { isAuthenticated, user } = useAuth();
+    const [authModalOpen, setAuthModalOpen] = useState(false);
+    const [authModalView, setAuthModalView] = useState<'login' | 'register'>('login');
 
-    // const handleSignIn = () => {
-    //     router.push('/signin');
-    // };
+    const handleOpenLogin = () => {
+        setAuthModalView('login');
+        setAuthModalOpen(true);
+    };
 
-    // const handleSignUp = () => {
-    //     router.push('/signup');
-    // };
-
-    // const handleSignOut = () => {
-    //     signOut();
-    // };
+    const handleOpenRegister = () => {
+        setAuthModalView('register');
+        setAuthModalOpen(true);
+    };
 
     const navigation: NavigationItem[] = [
         { name: t('navHome'), href: '/', current: true },
@@ -140,31 +141,26 @@ const Navbar = () => {
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 px-6">
                                 <ThemeToggle />
                                 <LanguageToggle />
-                                {/* <div className="flex items-center space-x-2 pl-4">
-                                    {!user ? (
+                                <div className="flex items-center space-x-2 pl-4">
+                                    {!isAuthenticated ? (
                                         <>
                                             <button
-                                                onClick={handleSignIn}
-                                                className="navbar-text-muted hover:bg-logo-mid hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                                onClick={handleOpenLogin}
+                                                className="navbar-text-muted hover:bg-logo-mid hover:text-white rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200"
                                             >
-                                                {t('navLogin')}
+                                                {t('navLogin') || 'Iniciar Sesión'}
                                             </button>
                                             <button
-                                                onClick={handleSignUp}
-                                                className="navbar-text-muted hover:bg-logo-mid hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                                onClick={handleOpenRegister}
+                                                className="bg-logo-light hover:bg-logo-mid text-white rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200"
                                             >
-                                                {t('navSignup')}
+                                                {t('navSignup') || 'Registrarse'}
                                             </button>
                                         </>
                                     ) : (
-                                        <button
-                                            onClick={handleSignOut}
-                                            className="navbar-text-muted hover:bg-logo-mid hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                        >
-                                            {t('navLogout') || 'Sign Out'}
-                                        </button>
+                                        <UserMenu className="ml-3" />
                                     )}
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,11 +204,59 @@ const Navbar = () => {
                                     </DisclosureButton>
                                 )
                             ))}
+                            
+                            {/* Mobile Auth Section */}
+                            {!isAuthenticated ? (
+                                <div className="border-t border-logo-light/40 pt-4 mt-4 space-y-1">
+                                    <DisclosureButton
+                                        as="button"
+                                        onClick={handleOpenLogin}
+                                        className="block w-full text-left rounded-md px-3 py-2 text-base font-medium navbar-text-muted hover:bg-logo-mid hover:text-white"
+                                    >
+                                        {t('navLogin') || 'Iniciar Sesión'}
+                                    </DisclosureButton>
+                                    <DisclosureButton
+                                        as="button"
+                                        onClick={handleOpenRegister}
+                                        className="block w-full text-left rounded-md px-3 py-2 text-base font-medium bg-logo-light hover:bg-logo-mid text-white"
+                                    >
+                                        {t('navSignup') || 'Registrarse'}
+                                    </DisclosureButton>
+                                </div>
+                            ) : (
+                                <div className="border-t border-logo-light/40 pt-4 mt-4">
+                                    <div className="px-3 py-2">
+                                        <UserMenu showFullMenu={false} />
+                                        <div className="mt-3 space-y-1">
+                                            <Link
+                                                href="/dashboard/profile"
+                                                className="block rounded-md px-3 py-2 text-base font-medium navbar-text-muted hover:bg-logo-mid hover:text-white"
+                                            >
+                                                Mi Perfil
+                                            </Link>
+                                            <Link
+                                                href="/dashboard/settings"
+                                                className="block rounded-md px-3 py-2 text-base font-medium navbar-text-muted hover:bg-logo-mid hover:text-white"
+                                            >
+                                                Configuración
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </DisclosurePanel>
                 </>
             )}
         </Disclosure>
+        
+        {/* Auth Modal */}
+        <AuthModal
+            isOpen={authModalOpen}
+            onClose={() => setAuthModalOpen(false)}
+            defaultView={authModalView}
+            onAuthSuccess={() => setAuthModalOpen(false)}
+        />
     );
 };
 

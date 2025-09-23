@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-import { i18n } from "./next-i18next.config";
+
+// Simple i18n configuration
+const i18n = {
+  locales: ['en', 'es'],
+  defaultLocale: 'en',
+};
 
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: true,
