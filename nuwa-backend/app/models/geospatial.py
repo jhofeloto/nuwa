@@ -92,8 +92,8 @@ class GeospatialData(Base):
     storage_location = Column(String(500))  # URL or path to stored data
     access_url = Column(String(500))  # Public access URL if available
     
-    # Metadata
-    metadata = Column(JSON, default=dict)
+    # Metadata  
+    geospatial_metadata = Column(JSON, default=dict)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now(), nullable=False)
     

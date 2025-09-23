@@ -118,7 +118,7 @@ class Project(Base):
     # owner_id = Column(Integer, ForeignKey('users.id'))
     
     # Additional project metadata
-    metadata = Column(JSON, default=dict)
+    project_metadata = Column(JSON, default=dict)
     
     # Validation flags
     is_validated = Column(Boolean, default=False)
