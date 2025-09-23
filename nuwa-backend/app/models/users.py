@@ -4,7 +4,6 @@ Includes comprehensive role-based access control with PostgreSQL + PostGIS integ
 """
 
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey, Text, JSON, Enum as SQLEnum
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from geoalchemy2 import Geometry
@@ -12,7 +11,7 @@ import enum
 from datetime import datetime, timezone
 from typing import Optional, List, Dict, Any
 
-Base = declarative_base()
+from app.core.database import Base
 
 class UserRole(str, enum.Enum):
     """User roles with hierarchical permissions"""
@@ -113,7 +112,6 @@ class Organization(Base):
     
     # Relationships
     users = relationship("User", back_populates="organization", cascade="all, delete-orphan")
-    projects = relationship("Project", back_populates="organization")
 
 class User(Base):
     """Enhanced user model with comprehensive authentication features"""
@@ -188,7 +186,7 @@ class User(Base):
     last_activity = Column(DateTime(timezone=True))
     
     # Relationships
-    user_permissions = relationship("UserPermission", back_populates="user", cascade="all, delete-orphan")
+    user_permissions = relationship("UserPermission", back_populates="user", cascade="all, delete-orphan", foreign_keys="UserPermission.user_id")
     user_sessions = relationship("UserSession", back_populates="user", cascade="all, delete-orphan")
     audit_logs = relationship("AuditLog", back_populates="user")
     

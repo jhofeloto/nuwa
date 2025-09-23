@@ -25,6 +25,7 @@ from app.core.database import init_database, close_database, get_db, check_datab
 from app.models.projects import Project, ProjectStatus, ProjectType
 from app.models.evaluations import Evaluation, EvaluationStatus
 from app.models.geospatial import GeospatialData, SatelliteImage, DataSource
+from app.models.users import User, Organization, UserPermission, UserSession, AuditLog
 
 # Import ML services
 from app.ml.models.co2_predictor import co2_prediction_service
