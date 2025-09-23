@@ -1,0 +1,102 @@
+# Nuwa Backend Docker Compose Configuration
+# Complete development environment with PostgreSQL + PostGIS
+
+version: '3.8'
+
+services:
+  # PostgreSQL with PostGIS extension
+  postgres:
+    image: postgis/postgis:15-3.3
+    container_name: nuwa-postgres
+    environment:
+      POSTGRES_DB: nuwa_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/pgdata
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d nuwa_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - nuwa-network
+
+  # Nuwa FastAPI Backend
+  nuwa-backend:
+    build: .
+    container_name: nuwa-backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # Database configuration
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: nuwa_db
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: postgres123
+      
+      # Application configuration
+      ENVIRONMENT: development
+      DEBUG: "true"
+      LOG_LEVEL: DEBUG
+      
+      # Security
+      SECRET_KEY: dev-secret-key-change-in-production
+      
+      # CORS
+      ALLOWED_ORIGINS: "http://localhost:3000,http://localhost:8080,http://127.0.0.1:3000"
+      
+      # External APIs (placeholder values for development)
+      SENTINEL_API_USER: ""
+      SENTINEL_API_PASSWORD: ""
+      LANDSAT_API_KEY: ""
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./logs:/app/logs
+      - uploads_data:/app/uploads
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - nuwa-network
+
+  # Redis (for caching and background jobs - optional)
+  redis:
+    image: redis:7-alpine
+    container_name: nuwa-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - nuwa-network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  uploads_data:
+    driver: local
+
+networks:
+  nuwa-network:
+    driver: bridge

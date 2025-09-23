@@ -1,0 +1,9 @@
+2025-09-23 03:16:16 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:16:16 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:16:17 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:16:17 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:16:27 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:207 - 🔧 Logging configured for development environment
+2025-09-23 03:16:27 - app.core.logging - [32mINFO[0m - logging_config - setup_logging:208 - 📊 Log level set to INFO
+2025-09-23 03:16:27 - app.main - [32mINFO[0m - main_simple - lifespan:32 - 🚀 Starting Nuwa Backend Service (Simplified Mode)...
+2025-09-23 03:16:27 - app.main - [32mINFO[0m - main_simple - lifespan:37 - ✅ Nuwa Backend Service started successfully (Database skipped)
+2025-09-23 03:16:49 - app.main - [32mINFO[0m - main_simple - create_project:224 - Created project 1: Amazon Reforestation Test Project
