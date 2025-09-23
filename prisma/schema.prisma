@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
@@ -12,7 +12,7 @@ model User {
   email         String    @unique
   role          Role      @default(GESTOR)
   password      String
-  id            String    @id @default(uuid()) @db.Uuid
+  id            String    @id @default(uuid())
   createdAt     DateTime  @default(now())
   emailVerified DateTime?
   updatedAt     DateTime  @updatedAt
@@ -22,7 +22,7 @@ model User {
 }
 
 model Account {
-  userId            String   @db.Uuid
+  userId            String
   type              String
   provider          String
   providerAccountId String
@@ -42,7 +42,7 @@ model Account {
 
 model Session {
   sessionToken String   @unique
-  userId       String   @db.Uuid
+  userId       String   
   expires      DateTime
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
@@ -58,12 +58,12 @@ model VerificationToken {
 }
 
 model MathModels {
-  id   String @id @default(uuid()) @db.Uuid
+  id   String @id @default(uuid()) 
   name String @unique
 }
 
 model Species {
-  id              String    @id @default(uuid()) @db.Uuid
+  id              String    @id @default(uuid()) 
   common_name     String    @unique
   scientific_name String    @unique
   family          String?
@@ -74,7 +74,7 @@ model Species {
 }
 
 model Keyword {
-  id              String           @id @default(uuid()) @db.Uuid
+  id              String           @id @default(uuid()) 
   name            String           @unique
   projectKeywords ProjectKeyword[]
 }
@@ -83,21 +83,21 @@ model Ecosystem {
   description String?
   values      Json
   type        String     @unique
-  id          String     @id @default(uuid()) @db.Uuid
+  id          String     @id @default(uuid()) 
   coverages   Coverage[]
   parcels     Parcels[]
 }
 
 model Project {
-  id          String           @id @default(uuid()) @db.Uuid
-  title       String           @db.VarChar(255)
-  country     String?          @db.VarChar(255)
+  id          String           @id @default(uuid()) 
+  title       String           
+  country     String?          
   status      Status           @default(Seed)
-  department  String?          @db.VarChar(255)
+  department  String?          
   values      Json?
   createdAt   DateTime         @default(now())
   updatedAt   DateTime         @updatedAt
-  creatorId   String           @db.Uuid
+  creatorId   String           
   description String?
   name        String           @unique
   contracts   Contracts[]
@@ -107,8 +107,8 @@ model Project {
 }
 
 model ProjectKeyword {
-  projectId String  @db.Uuid
-  keywordId String  @db.Uuid
+  projectId String  
+  keywordId String  
   keyword   Keyword @relation(fields: [keywordId], references: [id], onDelete: Cascade)
   project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
 
@@ -116,12 +116,12 @@ model ProjectKeyword {
 }
 
 model Parcels {
-  id           String           @id @default(uuid()) @db.Uuid
+  id           String           @id @default(uuid()) 
   name         String           @unique
-  projectId    String?          @db.Uuid
-  ecosystemId  String?          @db.Uuid
-  speciesId    String           @db.Uuid
-  area         Decimal?         @db.Decimal(10, 7)
+  projectId    String?          
+  ecosystemId  String?          
+  speciesId    String           
+  area         Decimal?
   municipality String?
   department   String?
   cadastral_id String?
@@ -135,8 +135,8 @@ model Parcels {
 }
 
 model Coverage {
-  id          String     @id @default(uuid()) @db.Uuid
-  ecosystemId String?    @db.Uuid
+  id          String     @id @default(uuid()) 
+  ecosystemId String?    
   description String?
   type        String?
   index       Index      @default(NDVI)
@@ -145,8 +145,8 @@ model Coverage {
 }
 
 model ParcelAnalysis {
-  id           String       @id @default(uuid()) @db.Uuid
-  parcelId     String       @db.Uuid
+  id           String       @id @default(uuid()) 
+  parcelId     String       
   analysisType AnalysisType @default(ML)
   values       Json
   createdAt    DateTime     @default(now())
@@ -156,7 +156,7 @@ model ParcelAnalysis {
 
 model Contracts {
   contractId      String         @id @unique
-  projectId       String?        @db.Uuid
+  projectId       String?        
   contractName    String
   contractType    String
   contractAddress String?
