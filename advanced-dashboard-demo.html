@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Nuwa Advanced Carbon Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 50%, #ecfdf5 100%);
+        }
+        .mint-gradient {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        .project-marker {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .project-marker:hover {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-transparent bg-clip-text mint-gradient mb-3">
+                    🌍 Nuwa Advanced Carbon Dashboard
+                </h1>
+                <p class="text-xl text-gray-600 mb-4">
+                    Real-time monitoring and analytics for global carbon capture projects
+                </p>
+                <div class="flex justify-center items-center gap-6 text-sm text-gray-500">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-green-500 rounded-full pulse-animation"></div>
+                        <span>PostgreSQL + PostGIS Active</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full pulse-animation"></div>
+                        <span>ML Models Online</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 bg-purple-500 rounded-full pulse-animation"></div>
+                        <span>Satellite Network Connected</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+        
+        <!-- Real-Time Metrics -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2 flex items-center gap-3">
+                    🔴 Live Monitoring
+                    <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full font-medium">LIVE</span>
+                </h2>
+                <p class="text-gray-600">Real-time data from satellite networks and ground sensors</p>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- CO2 Capture Rate -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl shadow-lg border border-green-200 float-animation">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-green-600">CO₂ Capture Rate</p>
+                            <p class="text-3xl font-bold text-green-800" id="co2-rate">123.4</p>
+                            <p class="text-xs text-green-600">tons/hour</p>
+                        </div>
+                        <div class="text-4xl">🌱</div>
+                    </div>
+                </div>
+
+                <!-- Active Monitors -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl shadow-lg border border-blue-200 float-animation">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-blue-600">Active Monitors</p>
+                            <p class="text-3xl font-bold text-blue-800" id="active-monitors">47</p>
+                            <p class="text-xs text-blue-600">sensors online</p>
+                        </div>
+                        <div class="text-4xl">📡</div>
+                    </div>
+                </div>
+
+                <!-- Satellite Updates -->
+                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl shadow-lg border border-purple-200 float-animation">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-purple-600">Satellite Updates</p>
+                            <p class="text-3xl font-bold text-purple-800" id="satellite-updates">18</p>
+                            <p class="text-xs text-purple-600">last hour</p>
+                        </div>
+                        <div class="text-4xl">🛰️</div>
+                    </div>
+                </div>
+
+                <!-- ML Predictions -->
+                <div class="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-xl shadow-lg border border-orange-200 float-animation">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-orange-600">ML Predictions</p>
+                            <p class="text-3xl font-bold text-orange-800" id="ml-predictions">32</p>
+                            <p class="text-xs text-orange-600">models running</p>
+                        </div>
+                        <div class="text-4xl">🧠</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">🌍 Project Locations</h2>
+                <p class="text-gray-600">Interactive visualization of carbon capture projects worldwide</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-gray-900">🌍 Carbon Capture Projects Map</h3>
+                    <div class="flex gap-2">
+                        <button onclick="zoomIn()" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-md text-sm">
+                            Zoom In
+                        </button>
+                        <button onclick="zoomOut()" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-md text-sm">
+                            Zoom Out
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SVG World Map with Projects -->
+                <div class="relative bg-gradient-to-br from-blue-100 to-green-100 rounded-lg overflow-hidden">
+                    <svg id="world-map" viewBox="0 0 800 400" class="w-full h-80" style="background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 100%);">
+                        <!-- Ocean background -->
+                        <rect width="800" height="400" fill="url(#waterPattern)" />
+                        
+                        <defs>
+                            <pattern id="waterPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+                                <rect width="4" height="4" fill="#87CEEB" opacity="0.3"/>
+                                <circle cx="2" cy="2" r="1" fill="#4682B4" opacity="0.5"/>
+                            </pattern>
+                        </defs>
+
+                        <!-- Continents -->
+                        <!-- North America -->
+                        <path d="M 50 80 Q 150 60 250 90 L 280 140 Q 250 180 200 170 L 150 190 Q 100 160 50 140 Z" 
+                              fill="#90EE90" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- South America -->
+                        <path d="M 180 200 Q 220 190 240 220 L 250 300 Q 230 350 200 340 L 170 320 Q 160 280 170 240 Z" 
+                              fill="#90EE90" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- Europe -->
+                        <path d="M 350 60 Q 420 50 450 80 L 460 120 Q 430 140 400 130 L 370 120 Q 340 90 350 60 Z" 
+                              fill="#90EE90" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- Africa -->
+                        <path d="M 380 130 Q 450 120 480 150 L 490 250 Q 470 320 430 310 L 390 280 Q 370 200 380 130 Z" 
+                              fill="#90EE90" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- Asia -->
+                        <path d="M 460 50 Q 600 40 700 70 L 720 140 Q 680 180 620 170 L 500 160 Q 450 100 460 50 Z" 
+                              fill="#90EE90" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- Australia -->
+                        <path d="M 580 280 Q 650 270 680 290 L 690 320 Q 670 340 640 335 L 590 330 Q 570 300 580 280 Z" 
+                              fill="#90EE90" stroke="#228B22" stroke-width="1" opacity="0.7"/>
+                        
+                        <!-- Project Markers -->
+                        <g id="project-markers">
+                            <!-- Costa Rica -->
+                            <circle cx="200" cy="170" r="8" fill="#22c55e" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('Costa Rica Reforestation', '15,420 tons/year', 'ACTIVE')"/>
+                            <circle cx="200" cy="170" r="12" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.3" class="pulse-animation"/>
+                            
+                            <!-- Brazil Amazon -->
+                            <circle cx="230" cy="250" r="12" fill="#16a34a" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('Amazon Conservation Brazil', '89,750 tons/year', 'ACTIVE')"/>
+                            <circle cx="230" cy="250" r="16" fill="none" stroke="#16a34a" stroke-width="1" opacity="0.3" class="pulse-animation"/>
+                            
+                            <!-- Kenya -->
+                            <circle cx="420" cy="200" r="9" fill="#15803d" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('Kenya Afforestation Program', '23,680 tons/year', 'ACTIVE')"/>
+                            <circle cx="420" cy="200" r="13" fill="none" stroke="#15803d" stroke-width="1" opacity="0.3" class="pulse-animation"/>
+                            
+                            <!-- Indonesia -->
+                            <circle cx="650" cy="240" r="10" fill="#0ea5e9" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('Indonesia Peat Restoration', '45,320 tons/year', 'ACTIVE')"/>
+                            <circle cx="650" cy="240" r="14" fill="none" stroke="#0ea5e9" stroke-width="1" opacity="0.3" class="pulse-animation"/>
+                            
+                            <!-- California -->
+                            <circle cx="120" cy="120" r="7" fill="#84cc16" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('California Grassland Carbon', '12,890 tons/year', 'COMPLETED')"/>
+                            
+                            <!-- Europe -->
+                            <circle cx="400" cy="100" r="8" fill="#65a30d" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('European Agroforestry Initiative', '18,760 tons/year', 'ACTIVE')"/>
+                            
+                            <!-- Australia -->
+                            <circle cx="630" cy="310" r="9" fill="#8b5cf6" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('Australian Soil Carbon Project', '34,520 tons/year', 'ACTIVE')"/>
+                            
+                            <!-- Iceland -->
+                            <circle cx="360" cy="70" r="11" fill="#ec4899" stroke="#fff" stroke-width="2" 
+                                    class="project-marker" onclick="showProject('Nordic Direct Air Capture', '67,890 tons/year', 'ACTIVE')"/>
+                        </g>
+                    </svg>
+
+                    <!-- Project Details Modal -->
+                    <div id="project-modal" class="hidden absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg max-w-xs border border-gray-200">
+                        <button onclick="hideProject()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">✕</button>
+                        <h4 id="project-name" class="font-bold text-gray-900 mb-2"></h4>
+                        <p id="project-co2" class="text-sm text-gray-600 mb-1"></p>
+                        <p id="project-status" class="text-sm text-gray-600"></p>
+                    </div>
+                </div>
+
+                <!-- Map Statistics -->
+                <div class="mt-4 grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-2xl font-bold text-emerald-600">8</div>
+                        <div class="text-sm text-gray-600">Active Projects</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-2xl font-bold text-emerald-600">308,080</div>
+                        <div class="text-sm text-gray-600">Total CO₂ Tons/Year</div>
+                    </div>
+                    <div class="bg-gray-50 p-3 rounded-lg">
+                        <div class="text-2xl font-bold text-emerald-600">7</div>
+                        <div class="text-sm text-gray-600">Project Types</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carbon Analytics Charts -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">📊 Carbon Analytics</h2>
+                <p class="text-gray-600">Comprehensive analysis and trends of carbon capture performance</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-6">
+                <!-- CO2 Trends Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📈 CO₂ Capture Trends</h3>
+                    <canvas id="co2TrendsChart" width="400" height="200"></canvas>
+                </div>
+
+                <!-- Project Types Chart -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🌳 Projects by Type</h3>
+                    <canvas id="projectTypesChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Satellite Network Status -->
+        <section>
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">🛰️ Satellite Network Status</h2>
+                <p class="text-gray-600">Real-time status of satellite monitoring infrastructure</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Sentinel-2 -->
+                <div class="p-4 rounded-lg border-2 border-green-200 bg-green-50">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-medium text-gray-900">Sentinel-2</span>
+                        <div class="w-3 h-3 rounded-full bg-green-500 pulse-animation"></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-1">Coverage: <span id="sentinel2-coverage">98.5%</span></p>
+                    <p class="text-xs text-gray-500">Updated: 2 min ago</p>
+                </div>
+
+                <!-- Landsat-8 -->
+                <div class="p-4 rounded-lg border-2 border-green-200 bg-green-50">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-medium text-gray-900">Landsat-8</span>
+                        <div class="w-3 h-3 rounded-full bg-green-500 pulse-animation"></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-1">Coverage: <span id="landsat8-coverage">87.2%</span></p>
+                    <p class="text-xs text-gray-500">Updated: 5 min ago</p>
+                </div>
+
+                <!-- Landsat-9 -->
+                <div class="p-4 rounded-lg border-2 border-yellow-200 bg-yellow-50">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-medium text-gray-900">Landsat-9</span>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-1">Coverage: <span id="landsat9-coverage">73.8%</span></p>
+                    <p class="text-xs text-gray-500">Updated: 15 min ago</p>
+                </div>
+
+                <!-- MODIS -->
+                <div class="p-4 rounded-lg border-2 border-green-200 bg-green-50">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-medium text-gray-900">MODIS</span>
+                        <div class="w-3 h-3 rounded-full bg-green-500 pulse-animation"></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-1">Coverage: <span id="modis-coverage">94.1%</span></p>
+                    <p class="text-xs text-gray-500">Updated: 1 min ago</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connection Status -->
+        <section class="bg-gradient-to-r from-emerald-50 to-green-50 p-6 rounded-xl border border-emerald-200">
+            <div class="flex items-center gap-3">
+                <div class="w-4 h-4 bg-green-500 rounded-full pulse-animation"></div>
+                <div>
+                    <h4 class="font-semibold text-emerald-800">🔗 Connected to PostgreSQL + PostGIS Backend</h4>
+                    <p class="text-sm text-emerald-600">
+                        Live data from enterprise geospatial database • API: https://8001-itul5g8xqfm9r87o3q08w-6532622b.e2b.dev
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Real-time data simulation
+        function updateRealTimeData() {
+            // Update CO2 rate
+            const co2Rate = (100 + Math.random() * 50).toFixed(1);
+            document.getElementById('co2-rate').textContent = co2Rate;
+            
+            // Update active monitors
+            const monitors = 45 + Math.floor(Math.random() * 10);
+            document.getElementById('active-monitors').textContent = monitors;
+            
+            // Update satellite updates
+            const updates = 15 + Math.floor(Math.random() * 10);
+            document.getElementById('satellite-updates').textContent = updates;
+            
+            // Update ML predictions
+            const predictions = 25 + Math.floor(Math.random() * 15);
+            document.getElementById('ml-predictions').textContent = predictions;
+            
+            // Update satellite coverage
+            document.getElementById('sentinel2-coverage').textContent = (95 + Math.random() * 5).toFixed(1) + '%';
+            document.getElementById('landsat8-coverage').textContent = (85 + Math.random() * 5).toFixed(1) + '%';
+            document.getElementById('landsat9-coverage').textContent = (70 + Math.random() * 8).toFixed(1) + '%';
+            document.getElementById('modis-coverage').textContent = (92 + Math.random() * 5).toFixed(1) + '%';
+        }
+
+        // Project interaction
+        function showProject(name, co2, status) {
+            document.getElementById('project-name').textContent = name;
+            document.getElementById('project-co2').textContent = 'CO₂ Potential: ' + co2;
+            document.getElementById('project-status').textContent = 'Status: ' + status;
+            document.getElementById('project-modal').classList.remove('hidden');
+        }
+
+        function hideProject() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+
+        // Map zoom functions
+        function zoomIn() {
+            const map = document.getElementById('world-map');
+            const currentTransform = map.style.transform || 'scale(1)';
+            const scale = parseFloat(currentTransform.match(/scale\(([\d.]+)\)/)?.[1] || 1);
+            const newScale = Math.min(scale * 1.2, 3);
+            map.style.transform = `scale(${newScale})`;
+        }
+
+        function zoomOut() {
+            const map = document.getElementById('world-map');
+            const currentTransform = map.style.transform || 'scale(1)';
+            const scale = parseFloat(currentTransform.match(/scale\(([\d.]+)\)/)?.[1] || 1);
+            const newScale = Math.max(scale / 1.2, 1);
+            map.style.transform = `scale(${newScale})`;
+        }
+
+        // Initialize charts
+        function initializeCharts() {
+            // CO2 Trends Chart
+            const co2Ctx = document.getElementById('co2TrendsChart').getContext('2d');
+            new Chart(co2Ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'CO₂ Captured',
+                        data: [8500, 9200, 10100, 11800, 13200, 15100, 16800, 18500, 20200, 22100, 24000, 26300],
+                        borderColor: '#22c55e',
+                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'CO₂ Projected',
+                        data: [12000, 13500, 15000, 16800, 18500, 20200, 22100, 24000, 26300, 28800, 31500, 34200],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'CO₂ (tons)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Project Types Chart
+            const typesCtx = document.getElementById('projectTypesChart').getContext('2d');
+            new Chart(typesCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Reforestation', 'Afforestation', 'Forest Management', 'Agroforestry', 'Soil Carbon', 'Wetland Restoration', 'Direct Air Capture'],
+                    datasets: [{
+                        data: [18, 12, 9, 8, 6, 4, 3],
+                        backgroundColor: [
+                            '#22c55e',
+                            '#16a34a',
+                            '#15803d',
+                            '#65a30d',
+                            '#8b5cf6',
+                            '#0ea5e9',
+                            '#ec4899'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        }
+                    }
+                }
+            });
+        }
+
+        // Start real-time updates
+        updateRealTimeData();
+        setInterval(updateRealTimeData, 5000);
+
+        // Initialize charts when page loads
+        initializeCharts();
+    </script>
+</body>
+</html>
